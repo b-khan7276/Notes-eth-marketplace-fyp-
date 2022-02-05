@@ -183,4 +183,29 @@ export function getStaticProps({params}) {
         </div>
 ```
 
-   
+# Leactues and keypoints
+- In the slug.js
+- I added props to Keypoints and curriculum
+```js
+     <Keypoints
+        points={course.wsl}
+      />
+      <Curriculum
+        locked={true}
+      />
+      <Modal />
+    </>
+```
+- then I edit `course/keypoints/index.js`
+- and call the props points
+```js 
+export default function Keypoints({points}) 
+```
+- In a `Curriculum/index.js`
+- I added locked function
+```js
+export default function Curriculum({locked}) {
+
+  const statusClass = "px-2 inline-flex text-xs leading-5 font-semibold rounded-full"
+  ```
+  

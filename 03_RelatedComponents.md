@@ -46,4 +46,17 @@ export default function List({courses}) {
           ```
 - Then I pass the values of `courses data` into tags
 
-      
+## optimizing Images in
+- I optimize imges in  `list/index.js`
+- I used the nextjs image tag in my file 
+- And used it insted of <img> tag like so
+```javascript
+     <Image
+                className="object-cover"
+                src={course.coverImage}
+                layout="fixed"
+                width="200"
+                height="230"
+                alt={course.title}
+              />
+              ```

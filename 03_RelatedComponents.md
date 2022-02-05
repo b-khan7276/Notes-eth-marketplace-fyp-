@@ -119,4 +119,39 @@ export default function List({courses}) {
             </div>
 ```
    
-     
+## Custamize data for each course
+- I write a function to get a single course by slug 
+- in a file `[slug].js`
+- the function is 
+```js
+//  To get the static paths 
+export function getStaticPaths(){
+    //  Fetch all our courses
+    const {data} = getAllCourses()
+    //  Now many pages you want to return 
+    return{
+        paths: data.map(c =>({
+            params:{
+                slug: c.slug
+            }
+        })), fallback:false
+
+    }
+}
+```
+- I will also need static props so
+- I will write a function for get staticprops
+- and i will call a single course by *params.slug*
+```js//  Adding the props also 
+export function getStaticProps({params}) {
+    const { data } = getAllCourses()
+    //  Search for single course
+    const course = data.filter(c => c.slug === params.slug)[0]
+    return {
+      props: {
+        course
+      }
+    }
+  ```
+  
+

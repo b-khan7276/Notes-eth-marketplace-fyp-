@@ -57,6 +57,66 @@ export default function List({courses}) {
                 layout="fixed"
                 width="200"
                 height="230"
-                alt={course.title}
-              />
-              ```
+                alt={course.title}/>
+ ```
+ # Course Detail page
+ - I made a folder Name `Corses` in a `pages` folder 
+ - I made a file by the name of `[slug].js`
+ - Now I copy the code of `courses.js` into `[slug].js` 
+  ```js
+  export default function Course() {
+
+ 
+  
+    return (
+   <>
+   <div className="py-4">
+       <CourseHero/>
+       </div>
+        <Keypoints/>
+       <Curriculum/>
+       <Modal/>
+       </>
+    )
+  }
+
+  Course.Layout = BaseLayout
+  ```
+  - Then I edit the `course/list/index`
+  - and Add *Link* tag into it 
+  ```js
+    <Link  href={`/courses/${course.slug}`}>
+              <a
+               
+                className="block mt-1 text-lg leading-tight font-medium text-black hover:underline">
+                {course.title}
+              </a>
+              </Link>
+ ```
+ - then I edit `Navbar/index.js` 
+ - and Added Link tag to it 
+ - Like so 
+ ```js 
+ <div>
+              <Link href="/" >
+                <a
+                  className="font-medium mr-8 text-gray-500 hover:text-gray-900">
+                  Home
+                </a>
+              </Link>
+              <Link href="/" >
+                <a
+                  className="font-medium mr-8 text-gray-500 hover:text-gray-900">
+                  Marketplace
+                </a>
+              </Link>
+              <Link href="/" >
+                <a
+                  className="font-medium mr-8 text-gray-500 hover:text-gray-900">
+                  Blogs
+                </a>
+              </Link>
+            </div>
+```
+   
+     

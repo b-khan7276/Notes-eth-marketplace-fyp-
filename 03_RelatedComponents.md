@@ -154,4 +154,33 @@ export function getStaticProps({params}) {
     }
   ```
   
+## Editing the course hero 
+- I call the course hero in the slug.js file 
+- I call the props of courses and call it in coursehero as
+```js
+  <div className="py-4">
+            {/* Calling the course hero to show the courses on the page */}
+          <CourseHero
+        //   call the props od couse in course hero 
+            title={course.title}
+            description={course.description}
+            image={course.coverImage}
+          />
+        </div>
+```
+- And then I call the props in *Hero* functon 
+- And pass it in 
+```js 
+ {title.substring(0, title.length / 2)}
+                     {title.substring(title.length / 2)}
 
+       <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+          <img
+            className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
+            src={image}
+            alt={title}
+          />
+        </div>
+```
+
+   

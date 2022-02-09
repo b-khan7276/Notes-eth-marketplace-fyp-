@@ -203,6 +203,8 @@ export default function Footer() {
   )
 }
 ```
-
+## using hooks 
+- I use hooks in button to connect to meta mask easily 
+ 
 
  

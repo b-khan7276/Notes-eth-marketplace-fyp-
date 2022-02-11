@@ -26,3 +26,8 @@ export default function Modal({isOpen}) {
       <Modal isOpen={false} />
     </>
 ```
+
+## Settinup the modal 
+- Now I will show the modal to the user 
+- where a user can put his information to buy a course 
+

@@ -59,3 +59,5 @@ export const useEthPrice = () => {
 ```js 
 import { useEthPrice } from "@components/hooks/useEthPrice"
 ```
+## Adding eth image 
+- Now I will add eth image along side with price of eth 
